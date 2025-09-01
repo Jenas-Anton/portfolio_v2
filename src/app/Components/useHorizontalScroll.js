@@ -25,7 +25,7 @@ export default function useHorizontalScroll(containerRef) {
             snapTo: 1 / (sections.length - 1),
             duration: 0,   // instant snap (hard lock)
             },
-            end: () => "+=" + containerRef.current.offsetWidth,
+            end: () => "+=" + containerRef.current.offsetWidth * (sections.length - 1),
         },
         });
     }, containerRef);

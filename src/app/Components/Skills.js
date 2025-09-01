@@ -24,18 +24,18 @@ const fadeInUp = {
 const Skills = () => {
   return (
     <motion.div
-      className="w-screen h-screen overflow-hidden flex flex-col justify-center items-center gap-4 p-6 sm:p-6"
+      className="w-screen h-screen  flex flex-col  items-center gap-10 p-6 sm:p-6"
       initial={{ opacity: 0.5 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
       viewport={{ once: false, amount: 0.75 }}
     >
       {/* Heading Section */}
-      <div className="text-center mt-4">
-        <h1 className="text-6xl position-top sm:text-5xl md:text-6xl font-bold bg-clip-text text-black mb-4">
+      <div className="text-center mt-20">
+        <h1 className="text-6xl position-top  text-[8vh] font-bold bg-clip-text text-black mb-4">
           My Skills
         </h1>
-        <p className="text-black text-base sm:text-lg md:text-xl max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-4">
+        <p className="text-black text-base sm:text-lg md:text-xl max-w-md text-[5vh] mx-auto mb-4">
           Explore the technologies and tools I work with to bring ideas to life
         </p>
         <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>

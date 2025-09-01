@@ -95,3 +95,23 @@ export const SkillData = [
     height: 80 
   },
 ];
+
+export const projects = [
+  {
+    title1: "Verdict",
+    title2: "AI",
+    src: "/VerdictAI.png"   // ✅ remove "public/"
+  },
+  {
+    title1: "Medical",
+    title2: "Chatbot",
+    src: "/MedicalChatbot.png"
+  },
+  {
+    title1: "Image",
+    title2: "Generator",
+    src: "/Stable Diffusion.png"
+  },
+];
+
+
