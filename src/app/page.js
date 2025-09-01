@@ -1,6 +1,7 @@
 import ZoomParallax from "./Components/ZoomParallax";
 import TextType from "./Components/TextType";
 import Skills from "./Components/Skills";
+import HorizontalScroll from "./Components/Horizontal/HorizontalScroll";
 
 
 export default function Page() {
@@ -8,7 +9,7 @@ export default function Page() {
     <main>
       <section id = "home">
         <div>
-        <h1  className="name"> Jenas Anton Vimal </h1>
+        <h1  className="name "> Jenas Anton Vimal </h1>
         <div className="type">
           <TextType 
             text={["Text typing effect", "for your websites", "Happy coding!"]}
@@ -22,15 +23,14 @@ export default function Page() {
       <ZoomParallax 
         imageSrc="/computer.png"
         imageAlt="computer"
-        maxScale={7.5}
+        maxScale={6.5}
         originX={0.45}
         originY={0.3}
       />
       </div>
       </section>
-      <section id="about">
-        <Skills/>
-      </section>
+      
+      <HorizontalScroll />
     </main>
   );
 }

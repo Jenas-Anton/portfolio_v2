@@ -5,7 +5,6 @@ import BallCanvas from "./Canvas/Ball";
 import { SkillData } from "../data";
 import { motion } from "framer-motion";
 
-// 🔹 Variants for staggering children
 const staggerContainer = (staggerChildren = 0.2, delayChildren = 0) => ({
   hidden: {},
   show: {
@@ -16,24 +15,24 @@ const staggerContainer = (staggerChildren = 0.2, delayChildren = 0) => ({
   },
 });
 
-// 🔹 Variants for each ball
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0, ease: "easeOut" } },
 };
 
 const Skills = () => {
   return (
     <motion.div
       className="w-screen h-screen overflow-hidden flex flex-col justify-center items-center gap-4 p-6 sm:p-6"
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0.5 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.2, ease: "easeInOut" }}
+      transition={{ duration: 0.2, ease: "easeInOut" }}
       viewport={{ once: false, amount: 0.75 }}
     >
       {/* Heading Section */}
-      <div className="text-center">
-        <h1 className="text-6xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-black mb-4">
+      <div className="text-center mt-4">
+        <h1 className="text-6xl position-top sm:text-5xl md:text-6xl font-bold bg-clip-text text-black mb-4">
           My Skills
         </h1>
         <p className="text-black text-base sm:text-lg md:text-xl max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-4">
@@ -42,9 +41,8 @@ const Skills = () => {
         <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
       </div>
 
-      {/* Skills Row */}
       <motion.div
-        variants={staggerContainer(0.2, 0.3)} // 🔹 apply stagger here
+        variants={staggerContainer(0.2, 0.1)} 
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
@@ -53,8 +51,8 @@ const Skills = () => {
         {SkillData.map((skillData) => (
           <motion.div
             key={skillData.name}
-            variants={fadeInUp} // 🔹 animate each ball
-            className="w-24 h-28 sm:w-28 sm:h-32 md:w-36 md:h-40 flex flex-col items-center group transition-transform duration-300 hover:scale-105"
+            variants={fadeInUp}
+            className="w-24 h-28 sm:w-28 sm:h-32 md:w-36 md:h-40 flex flex-col items-center group transition-transform duration-300 hover:scale-105 "
           >
             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32">
               <BallCanvas icon={skillData.src} />
