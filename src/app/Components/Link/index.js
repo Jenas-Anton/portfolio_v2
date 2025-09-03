@@ -1,11 +1,25 @@
-// Components/NavLink.js
-import styles from './style.module.scss';
-import NextLink from 'next/link';
-import { motion } from 'framer-motion';
-import { slide, scale } from '../Header/anime';
+"use client";
+import styles from "./style.module.scss";
+import NextLink from "next/link";
+import { motion } from "framer-motion";
+import { slide, scale } from "../Header/anime";
 
 export default function NavLink({ data, isActive, setSelectedIndicator }) {
   const { label, link, index } = data;
+
+  const handleClick = (e) => {
+    if (link.startsWith("/#") || link.startsWith("#")) {
+      e.preventDefault();
+      const id = link.replace("/#", "#"); // normalize
+      const section = document.querySelector(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+        setSelectedIndicator(link);
+      }
+    } else {
+      setSelectedIndicator(link);
+    }
+  };
 
   return (
     <motion.div
@@ -19,13 +33,10 @@ export default function NavLink({ data, isActive, setSelectedIndicator }) {
     >
       <motion.div
         variants={scale}
-        animate={isActive ? 'open' : 'closed'}
+        animate={isActive ? "open" : "closed"}
         className={styles.indicator}
       />
-      <NextLink 
-        href={link} 
-        onClick={() => setSelectedIndicator(link)}  // update active state on click
-      >
+      <NextLink href={link} onClick={handleClick}>
         {label}
       </NextLink>
     </motion.div>
