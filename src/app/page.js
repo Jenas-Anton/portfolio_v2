@@ -2,11 +2,12 @@ import ZoomParallax from "./Components/ZoomParallax";
 import TextType from "./Components/TextType";
 import Skills from "./Components/Skills";
 import HorizontalScroll from "./Components/HorizontalScroll";
-
+import Header from "./Components/Header";
 
 export default function Page() {
   return (
     <main>
+      <Header />
       <section id = "home">
         <div>
         <h1  className="name "> Jenas Anton Vimal </h1>

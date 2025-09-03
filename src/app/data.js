@@ -114,4 +114,9 @@ export const projects = [
   },
 ];
 
+export const BtnList = [
+  { label: "Home", link: "/#home" },
+  { label: "Skills", link: "/#skills" },
+  { label: "Projects", link: "/#projects" },
+];
 

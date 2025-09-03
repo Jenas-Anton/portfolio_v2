@@ -16,12 +16,12 @@
       <div ref={containerRef} className="relative h-screen overflow-hidden">
         <div className="flex">
           {/* Panel 1 */}
-          <section className="panel bg-[#FCFCFC]">
+          <section id = "skills" className="panel bg-[#FCFCFC]">
             <Skills />
           </section>
 
           {/* Panel 2 */}
-          <section className="panel bg-[#FCFCFC] text-black">
+          <section id = "projects" className="panel bg-[#FCFCFC] text-black">
             <motion.div
               className="w-screen h-screen  flex flex-col items-center gap-10 p-6 "
               initial={{ opacity: 0.5 }}
@@ -36,8 +36,8 @@
                 <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
               </div>
             <div className="gallery ">
-              {projects.map((project) => (
-                <Project key={project.id} project={project} />
+              {projects.map((project, index) => (
+                <Project key={index} project={project} />
               ))}
             </div>
             </motion.div>
