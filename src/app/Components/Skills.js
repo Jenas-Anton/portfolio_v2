@@ -15,7 +15,6 @@ const staggerContainer = (staggerChildren = 0.2, delayChildren = 0) => ({
   },
 });
 
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { duration: 0, ease: "easeOut" } },
@@ -24,7 +23,7 @@ const fadeInUp = {
 const Skills = () => {
   return (
     <motion.div
-      className="w-screen h-screen  flex flex-col  items-center gap-10 p-6 sm:p-6"
+      className="w-screen min-h-screen flex flex-col items-center gap-10 p-6 sm:p-6"
       initial={{ opacity: 0.5 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
@@ -32,29 +31,41 @@ const Skills = () => {
     >
       {/* Heading Section */}
       <div className="text-center mt-20">
-        <h1 className="text-6xl position-top  text-[8vh] font-bold bg-clip-text text-black mb-4">
+        <h1 className="text-[8vh] font-bold bg-clip-text text-black mb-4">
           My Skills
         </h1>
-        <p className="text-black text-base sm:text-lg md:text-xl max-w-md text-[5vh] mx-auto mb-4">
+        <p className="text-black text-base sm:text-lg md:text-xl max-w-md mx-auto mb-4">
           Explore the technologies and tools I work with to bring ideas to life
         </p>
         <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
       </div>
 
+      {/* Skills Grid */}
       <motion.div
-        variants={staggerContainer(0.2, 0.1)} 
+        variants={staggerContainer(0.2, 0.1)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="flex flex-wrap justify-center items-center gap-6 sm:gap-2 md:gap-12 mt-6"
+        className="
+          flex flex-wrap justify-center items-center 
+          gap-4 sm:gap-6 md:gap-10 mt-6 w-full px-4
+          max-h-[60vh] overflow-y-auto pb-20
+        "
       >
         {SkillData.map((skillData) => (
           <motion.div
             key={skillData.name}
             variants={fadeInUp}
-            className="w-24 h-28 sm:w-28 sm:h-32 md:w-36 md:h-40 flex flex-col items-center group transition-transform duration-300 hover:scale-105 "
+            className="
+              w-20 h-24 
+              sm:w-24 sm:h-28 
+              md:w-28 md:h-32 
+              lg:w-36 lg:h-40 
+              flex flex-col items-center 
+              group transition-transform duration-300 hover:scale-105 
+            "
           >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28">
               <BallCanvas icon={skillData.src} />
             </div>
             <p className="text-black text-sm sm:text-base md:text-lg font-semibold mt-3 text-center">
@@ -62,7 +73,8 @@ const Skills = () => {
             </p>
           </motion.div>
         ))}
-      </motion.div>
+</motion.div>
+
     </motion.div>
   );
 };

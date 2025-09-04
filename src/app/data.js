@@ -118,5 +118,17 @@ export const BtnList = [
   { label: "Home", link: "/#home" },
   { label: "Skills", link: "/#skills" },
   { label: "Projects", link: "/#projects" },
+  {
+    label: "Github",
+    link: "https://github.com/Jenas-Anton",
+  },
+  {
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/jenas-anton/",
+  },
+  {
+    label: "Resume",
+    link: "https://drive.google.com/file/d/1e6Kkz-ol-jboVIKdGA7ASFIFCXoHTYMb/view?usp=sharing",
+  },
 ];
 
