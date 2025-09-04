@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
-import styles from "./styles.module.scss";
+import styles from './project.module.scss';
 import { useState } from 'react';
 
 const anim = {
@@ -9,15 +9,8 @@ const anim = {
     closed: {width: 0}
 }
 
-
 export default function index({project}) {
-
-
-
     const [isActive, setIsActive] = useState(false);
-
-
-
     const { title1, title2, src } = project;
     return (
         <div onMouseEnter={() => {setIsActive(true)}} onMouseLeave={() => {setIsActive(false)}} className={styles.project}>

@@ -20,10 +20,10 @@ export default function useHorizontalScroll(containerRef) {
         scrollTrigger: {
             trigger: containerRef.current,
             pin: true,
-            scrub: true,  // immediate, no lag
+            scrub: true,  
             snap: {
             snapTo: 1 / (sections.length - 1),
-            duration: 0,   // instant snap (hard lock)
+            duration: 0, 
             },
             end: () => "+=" + containerRef.current.offsetWidth * (sections.length - 1),
         },

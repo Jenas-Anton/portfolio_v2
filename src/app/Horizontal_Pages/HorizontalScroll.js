@@ -2,7 +2,7 @@
   import React, { useRef } from "react";
   import useHorizontalScroll from "./useHorizontalScroll";
   import Skills from "./Skills_page/Skills";
-  import Project from "./Project"; 
+  import Project from "./Project";
   import { projects } from "../data";
   import {motion} from "framer-motion";
 
@@ -13,15 +13,16 @@
     useHorizontalScroll(containerRef);
 
     return (
-      <div ref={containerRef} className="relative bg-[#FCFCFC] h-screen overflow-hidden">
+      <div ref={containerRef} className="relative bg-[#FCFCFC] h-screen overflow-hidden snap-x snap-mandatory flex 
+                 scroll-smooth">
         <div className="flex">
           {/* Panel 1 */}
-          <section id = "skills" className="panel ">
+          <section id = "skills" className="panel  snap-center w-screen h-screen">
             <Skills />
           </section>
 
           {/* Panel 2 */}
-          <section id = "projects" className="panel  text-black">
+          <section id = "projects" className="panel  text-black  snap-center w-screen h-screen">
             <motion.div
               className="w-screen h-screen  flex flex-col items-center gap-10 p-6 "
               initial={{ opacity: 0 }}

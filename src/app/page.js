@@ -1,14 +1,15 @@
 import ZoomParallax from "./Components/ZoomParallax";
 import TextType from "./Components/TextType";
-import Skills from "./Components/Skills_page/Skills";
-import HorizontalScroll from "./Components/HorizontalScroll";
+import Skills from "./Horizontal_Pages/Skills_page/Skills";
+import HorizontalScroll from "./Horizontal_Pages/HorizontalScroll";
 import Header from "./Components/Navigation/Header";
 
 export default function Page() {
   return (
     <main>
+      <div className="snap-y snap-mandatory">
       <Header />
-      <section id = "home">
+      <section id = "home" className="snap-start">
         <div>
         <h1  className="name "> Jenas Anton Vimal </h1>
         <div className="type">
@@ -30,8 +31,10 @@ export default function Page() {
       />
       </div>
       </section>
-      
+
       <HorizontalScroll />
+      </div>
     </main>
   );
 }
+     
