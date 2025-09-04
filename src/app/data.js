@@ -115,9 +115,9 @@ export const projects = [
 ];
 
 export const BtnList = [
-  { label: "Home", link: "/#home" },
-  { label: "Skills", link: "/#skills" },
-  { label: "Projects", link: "/#projects" },
+  { label: "Home", link: "#home" },
+  { label: "Skills", link: "#skills" },
+  { label: "Projects", link: "#projects" },
   {
     label: "Github",
     link: "https://github.com/Jenas-Anton",

@@ -76,3 +76,45 @@ body {
   scroll-snap-align: start;
 }
 
+
+/* Animated Gradient Name */
+.gradient-name {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+/* Custom Bounce Animation for Scroll Icon */
+.scroll-icon {
+  animation: customBounce 2s infinite;
+}
+
+/* Keyframe Animations */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes customBounce {
+  0%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+/* Fallback for older browsers */
+@supports not (background-clip: text) {
+  .gradient-name {
+    background: linear-gradient(45deg, #667eea, #f093fb);
+    color: #667eea;
+  }
+}

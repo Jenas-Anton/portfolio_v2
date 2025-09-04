@@ -11,7 +11,8 @@ export default function Page() {
       <Header />
       <section id = "home" className="snap-start">
         <div>
-        <h1  className="name "> Jenas Anton Vimal </h1>
+        <h1  className="name flex items-center justify-center text-[50vw] sm:text-[14vw] md:text-[12vw] lg:text-[10vw] xl:text-[8vw] 
+                          font-bold z-10 "> Jenas Anton Vimal </h1>
         <div className="type">
           <TextType 
             text={["Text typing effect", "for your websites", "Happy coding!"]}
