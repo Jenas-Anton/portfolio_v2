@@ -1,8 +1,8 @@
 import ZoomParallax from "./Components/ZoomParallax";
 import TextType from "./Components/TextType";
-import Skills from "./Components/Skills";
+import Skills from "./Components/Skills_page/Skills";
 import HorizontalScroll from "./Components/HorizontalScroll";
-import Header from "./Components/Header";
+import Header from "./Components/Navigation/Header";
 
 export default function Page() {
   return (

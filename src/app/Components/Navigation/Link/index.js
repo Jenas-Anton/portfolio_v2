@@ -10,7 +10,7 @@ export default function NavLink({ data, isActive, setSelectedIndicator }) {
   const handleClick = (e) => {
     if (link.startsWith("/#") || link.startsWith("#")) {
       e.preventDefault();
-      const id = link.replace("/#", "#"); // normalize
+      const id = link.replace("/#", "#"); 
       const section = document.querySelector(id);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });

@@ -2,7 +2,7 @@
 
 import React from "react";
 import BallCanvas from "./Canvas/Ball";
-import { SkillData } from "../data";
+import { SkillData } from "../../data";
 import { motion } from "framer-motion";
 
 const staggerContainer = (staggerChildren = 0.2, delayChildren = 0) => ({
@@ -26,7 +26,7 @@ const Skills = () => {
       className="w-screen min-h-screen flex flex-col items-center gap-10 p-6 sm:p-6"
       initial={{ opacity: 0.5 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.2, ease: "easeInOut" }}
+      transition={{ duration: 0.1, ease: "easeInOut" }}
       viewport={{ once: false, amount: 0.75 }}
     >
       {/* Heading Section */}

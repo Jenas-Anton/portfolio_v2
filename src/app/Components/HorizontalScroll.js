@@ -1,7 +1,7 @@
   "use client";
   import React, { useRef } from "react";
   import useHorizontalScroll from "./useHorizontalScroll";
-  import Skills from "./Skills";
+  import Skills from "./Skills_page/Skills";
   import Project from "./Project"; 
   import { projects } from "../data";
   import {motion} from "framer-motion";
@@ -13,15 +13,15 @@
     useHorizontalScroll(containerRef);
 
     return (
-      <div ref={containerRef} className="relative h-screen overflow-hidden">
+      <div ref={containerRef} className="relative bg-[#FCFCFC] h-screen overflow-hidden">
         <div className="flex">
           {/* Panel 1 */}
-          <section id = "skills" className="panel bg-[#FCFCFC]">
+          <section id = "skills" className="panel ">
             <Skills />
           </section>
 
           {/* Panel 2 */}
-          <section id = "projects" className="panel bg-[#FCFCFC] text-black">
+          <section id = "projects" className="panel  text-black">
             <motion.div
               className="w-screen h-screen  flex flex-col items-center gap-10 p-6 "
               initial={{ opacity: 0 }}

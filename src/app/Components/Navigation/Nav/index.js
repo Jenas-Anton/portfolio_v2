@@ -13,7 +13,6 @@ export default function Menu() {
 
   return (
 
-
     <motion.div
       variants={menuSlide}
       initial="initial"
