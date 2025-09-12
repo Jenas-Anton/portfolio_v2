@@ -2,9 +2,10 @@
   import React, { useRef } from "react";
   import useHorizontalScroll from "./useHorizontalScroll";
   import Skills from "./Skills_page/Skills";
-  import Project from "./Project";
+  import Project from "./Project"; 
   import { projects } from "../data";
   import {motion} from "framer-motion";
+import EducationTimeline from "../Components/Timeline/Education";
 
   export default function HorizontalScroll() {
     const containerRef = useRef(null);
@@ -13,16 +14,19 @@
     useHorizontalScroll(containerRef);
 
     return (
-      <div ref={containerRef} className="relative bg-[#FCFCFC] h-screen overflow-hidden snap-x snap-mandatory flex 
-                 scroll-smooth">
+      <div ref={containerRef} className="relative bg-[#FCFCFC] h-screen overflow-hidden">
         <div className="flex">
+
+          <section id="education" className="panel">
+            <EducationTimeline />
+          </section>
           {/* Panel 1 */}
-          <section id = "skills" className="panel  snap-center w-screen h-screen">
+          <section id = "skills" className="panel ">
             <Skills />
           </section>
 
           {/* Panel 2 */}
-          <section id = "projects" className="panel  text-black  snap-center w-screen h-screen">
+          <section id = "projects" className="panel  text-black">
             <motion.div
               className="w-screen h-screen  flex flex-col items-center gap-10 p-6 "
               initial={{ opacity: 0 }}
