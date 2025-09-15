@@ -17,9 +17,9 @@ import EducationTimeline from "../Components/Timeline/Education";
       <div ref={containerRef} className="relative bg-[#FCFCFC] h-screen overflow-hidden">
         <div className="flex">
 
-          <section id="education" className="panel">
+          {/* <section id="education" className="panel">
             <EducationTimeline />
-          </section>
+          </section> */}
           {/* Panel 1 */}
           <section id = "skills" className="panel ">
             <Skills />

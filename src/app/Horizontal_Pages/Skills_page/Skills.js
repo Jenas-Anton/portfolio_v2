@@ -51,6 +51,7 @@ const Skills = () => {
       >
         {SkillData.map((skillData) => (
           <motion.div
+            key={skillData.name}
             className="
               w-20 h-24 
               sm:w-24 sm:h-28 
