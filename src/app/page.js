@@ -2,12 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
-
 import ZoomParallax from "./Components/ZoomParallax";
-import Skills from "./Horizontal_Pages/Skills_page/Skills";
 import HorizontalScroll from "./Horizontal_Pages/HorizontalScroll";
 import Header from "./Components/Navigation/Header";
 import Preloader from "./Components/Preloader";
+import EmailSection from "./Components/Contact/Contact";
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,6 +57,10 @@ export default function Page() {
 
         {/* Horizontal Scroll Section */}
         <HorizontalScroll />
+
+        <section >
+          <EmailSection/>
+        </section>
       </div>
     </main>
   );

@@ -1,4 +1,5 @@
 import { GraduationCap, Award, BookOpen } from "lucide-react";
+import { GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon } from "lucide-react";
 export const SkillData = [
   // 🔹 Programming Languages
   { 
@@ -156,5 +157,26 @@ export const educationData = [
     score: "9.45 CGPA",
     icon: <GraduationCap className="w-4 h-4" />,
     status: "ongoing",
+  },
+];
+
+export const FooterData =  [
+  {
+    label: "Github",
+    link: "https://github.com/Jenas-Anton",
+    icon: "github",
+    newTab: true,
+  },
+  {
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/jenas-anton/",
+    icon: "linkedin",
+    newTab: true,
+  },
+  {
+    label: "G-Mail",
+    link: "jenasav010@gmail.com",
+    icon: "mail",
+    newTab: true,
   },
 ];
