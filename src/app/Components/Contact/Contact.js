@@ -50,7 +50,7 @@ const EmailSection = () => {
                 if (item.icon === "mail") hoverClass = "hover:bg-red-600 hover:text-white";
 
                 return (
-                  <Mag>
+                  <Mag key={index}>
                   <button
                     key={index}
                     onClick={() => handleFooterClick(item)}
@@ -166,7 +166,7 @@ const EmailSection = () => {
             if (item.icon === "mail") hoverClass = "hover:bg-red-600 hover:text-white";
 
             return (
-              <Mag>
+              <Mag key = {index}>
               <button
                 key={index}
                 onClick={() => handleFooterClick(item)}
