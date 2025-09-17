@@ -40,7 +40,8 @@ export default function Page() {
         {/* Home Section */}
        <section id="home">
   <div className="gap-10">
-    <h1 className="name z-10">Jenas Anton Vimal</h1>
+    <h1 className="name z-10 bg-gradient-to-t from-gray-500 to-white 
+                 bg-clip-text text-transparent">Jenas Anton Vimal</h1>
 
     {/* Spacer div */}
     <div className="my-10" /> {/* You can adjust the height using margin or padding */}
