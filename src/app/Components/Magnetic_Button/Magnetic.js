@@ -5,8 +5,8 @@ export default function Mag({children}) {
     const magnetic = useRef(null);
 
     useEffect( () => {
-        const xTo = gsap.quickTo(magnetic.current, "x", {duration: 1, ease: "power3.out"})
-        const yTo = gsap.quickTo(magnetic.current, "y", {duration: 1, ease: "power3.out"})
+        const xTo = gsap.quickTo(magnetic.current, "x", {duration: 0.3, ease: "elastic.out(2.5, 0.1)"})
+        const yTo = gsap.quickTo(magnetic.current, "y", {duration: 0.3, ease: "elastic.out(2.5, 0.1)"})
 
         const mouseMove = (e) => {
             const { clientX, clientY } = e;
@@ -18,8 +18,8 @@ export default function Mag({children}) {
         }
 
         const mouseLeave = (e) => {
-            gsap.to(magnetic.current, {x: 0, duration: 1})
-            gsap.to(magnetic.current, {y: 0, duration: 1})
+            gsap.to(magnetic.current, {x: 0, duration: 0.2})
+            gsap.to(magnetic.current, {y: 0, duration: 0.2})
             xTo(0);
             yTo(0)
         }
