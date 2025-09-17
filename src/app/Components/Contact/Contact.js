@@ -7,19 +7,15 @@ import Mag from "../Magnetic_Button/Magnetic";
 const EmailSection = () => {
   const [state, handleSubmit] = useForm("mgvadaka");
 
-  const getIcon = (iconName, size = 36) => {
-    switch (iconName) {
-      case "github":
-        return <Github size={size} />;
-      case "linkedin":
-        return <Linkedin size={size} />;
-      case "mail":
-        return <Mail size={size} />;
-      default:
-        return null;
-    }
+  // Function to return icons
+  const getIcon = (iconName, className = "w-8 h-8") => {
+    if (iconName === "github") return <Github className={className} />;
+    if (iconName === "linkedin") return <Linkedin className={className} />;
+    if (iconName === "mail") return <Mail className={className} />;
+    return null;
   };
 
+  // Handle footer icon clicks
   const handleFooterClick = (item) => {
     if (item.icon === "mail") {
       window.location.href = `mailto:${item.link}`;
@@ -32,6 +28,7 @@ const EmailSection = () => {
     }
   };
 
+  // Success state
   if (state.succeeded) {
     return (
       <div className="min-h-screen bg-[#FCFCFC] flex flex-col">
@@ -44,23 +41,31 @@ const EmailSection = () => {
         {/* Footer */}
         <footer className="bg-black py-8">
           <div className="flex flex-wrap justify-center items-center gap-6">
-            {FooterData.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleFooterClick(item)}
-                className="flex flex-col md:flex-row items-center gap-2 text-white hover:text-gray-300 transition-colors duration-200 px-4 py-2 rounded-lg hover:bg-gray-800"
-                aria-label={item.label}
-              >
-                {getIcon(item.icon, 28)}
-                <span className="text-sm font-medium">{item.label}</span>
-              </button>
-            ))}
+            {FooterData.map((item, index) => {
+              let hoverBorderClass = "";
+              if (item.icon === "github") hoverBorderClass = "hover:border-black";
+              if (item.icon === "linkedin") hoverBorderClass = "hover:border-blue-600";
+              if (item.icon === "mail") hoverBorderClass = "hover:border-red-600";
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => handleFooterClick(item)}
+                  className={`flex flex-col md:flex-row items-center gap-2 text-white border-2 border-transparent transition-all duration-200 px-4 py-2 rounded-lg ${hoverBorderClass}`}
+                  aria-label={item.label}
+                >
+                  {getIcon(item.icon, "w-8 h-8 md:w-10 md:h-10")}
+                  <span className="text-sm font-medium">{item.label}</span>
+                </button>
+              );
+            })}
           </div>
         </footer>
       </div>
     );
   }
 
+  // Default state
   return (
     <div className="min-h-screen bg-[#FCFCFC] flex flex-col w-full">
       {/* Main Content */}
@@ -150,16 +155,23 @@ const EmailSection = () => {
       {/* Footer Icons */}
       <div className="py-16">
         <div className="flex flex-wrap justify-center items-center gap-8">
-          {FooterData.map((item, index) => (
-            <button
-              key={index}
-              onClick={() => handleFooterClick(item)}
-              className="flex items-center justify-center gap-2 md:gap-3 text-black hover:text-red-500 px-6 py-3"
-              aria-label={item.label}
-            >
-              {getIcon(item.icon, 28)}
-            </button>
-          ))}
+          {FooterData.map((item, index) => {
+            let hoverClass = "";
+            if (item.icon === "github") hoverClass = "hover:bg-black hover:text-white";
+            if (item.icon === "linkedin") hoverClass = "hover:bg-blue-600 hover:text-white";
+            if (item.icon === "mail") hoverClass = "hover:bg-red-600 hover:text-white";
+
+            return (
+              <button
+                key={index}
+                onClick={() => handleFooterClick(item)}
+                className={`flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full  text-black transition-all duration-200 ${hoverClass}`}
+                aria-label={item.label}
+              >
+                {getIcon(item.icon, "w-8 h-8 md:w-10 md:h-10")}
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>

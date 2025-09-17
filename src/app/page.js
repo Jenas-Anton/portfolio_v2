@@ -38,7 +38,7 @@ export default function Page() {
         <Header />
 
         {/* Home Section */}
-        <section id="home" className="snap-start">
+        <section id="home" className="flex-col snap-start">
           <div>
             <h1 className="name text-[5vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
                  bg-clip-text text-transparent items-center justify-center mt-[5vh] mb-[3vh] sm:mb-[4vh] md:mb-[5vh] lg:mb-[6vh]">
