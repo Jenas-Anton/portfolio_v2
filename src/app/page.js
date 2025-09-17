@@ -44,7 +44,9 @@ export default function Page() {
                         bg-clip-text text-transparent">Jenas Anton Vimal</h1>
 
             {/* Spacer div */}
-            <div className="my-10" /> {/* You can adjust the height using margin or padding */}
+
+            <div class="-my-22" /> 
+
             <div>
               <ZoomParallax 
                 imageSrc="/computer.png"
