@@ -44,7 +44,8 @@ export default function Page() {
                         bg-clip-text text-transparent">Jenas Anton Vimal</h1>
 
             {/* Spacer div */}
-            <div className="my-10" /> {/* You can adjust the height using margin or padding */}
+          <div className="my-10 3xl:my-20" />
+{/* You can adjust the height using margin or padding */}
 
             <div className="type h-5rem">
             </div>
