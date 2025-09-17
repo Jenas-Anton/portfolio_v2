@@ -38,7 +38,7 @@ export default function Page() {
         <Header />
 
         {/* Home Section */}
-        <section id="home" className="snap-start flex flex-col items-center justify-center" style={{ gap: '-2.5rem' }}>
+        <section id="home" className="snap-start items-center justify-center" style={{ gap: '-2.5rem' }}>
           <h1 className="name text-[5vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
               bg-clip-text text-transparent flex items-center justify-center z-10">
             Jenas Anton
