@@ -4,8 +4,6 @@ import React from "react";
 import BallCanvas from "./Canvas/Ball";
 import { SkillData } from "../../data";
 import { motion } from "framer-motion";
-import ScrollReveal from "@/app/Components/ScrollReveal";
-
 const staggerContainer = (staggerChildren = 0.2, delayChildren = 0) => ({
   hidden: {},
   show: {
