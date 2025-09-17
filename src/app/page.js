@@ -27,7 +27,7 @@ export default function Page() {
   }, []);
 
   return (
-    <main>
+    <main className="relative w-full">
       {/* Preloader */}
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
@@ -38,19 +38,27 @@ export default function Page() {
         <Header />
 
         {/* Home Section */}
-        <section id="home" className="snap-start">
-          <div>
-            <h1 className="name text-[5vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
-                 bg-clip-text text-transparent  items-center justify-center z-10">
+        <section
+          id="home"
+          className="snap-start flex flex-col items-center justify-center py-20 px-4 md:px-16 lg:px-32"
+        >
+          <div className="flex flex-col items-center justify-center space-y-10 md:space-y-16">
+            <h1
+              className="name text-[10vw] md:text-[5vw] lg:text-[4vw] font-extrabold 
+                         w-full text-center bg-gradient-to-t from-gray-500 to-white 
+                         bg-clip-text text-transparent z-10"
+            >
               Jenas Anton
             </h1>
-            <div className="type"></div>
+
+            {/* ZoomParallax Image */}
             <ZoomParallax
               imageSrc="/computer.png"
               imageAlt="computer"
               maxScale={6.5}
               originX={0.45}
               originY={0.3}
+              className="w-[80vw] max-w-[700px] h-auto"
             />
           </div>
         </section>
@@ -58,8 +66,9 @@ export default function Page() {
         {/* Horizontal Scroll Section */}
         <HorizontalScroll />
 
-        <section id="contact" >
-          <EmailSection/>
+        {/* Contact Section */}
+        <section id="contact" className="py-20 px-4 md:px-16 lg:px-32">
+          <EmailSection />
         </section>
       </div>
     </main>
