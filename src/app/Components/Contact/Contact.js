@@ -39,26 +39,30 @@ const EmailSection = () => {
         </div>
 
         {/* Footer */}
-        <footer className="bg-black py-8">
-          <div className="flex flex-wrap justify-center items-center gap-6">
-            {FooterData.map((item, index) => {
-              let hoverBorderClass = "";
-              if (item.icon === "github") hoverBorderClass = "hover:border-black";
-              if (item.icon === "linkedin") hoverBorderClass = "hover:border-blue-600";
-              if (item.icon === "mail") hoverBorderClass = "hover:border-red-600";
+        <footer className="py-18">
+          {/* Footer Icons */}
+          <div className="">
+            <div className="flex flex-wrap justify-center items-center gap-8">
+              {FooterData.map((item, index) => {
+                let hoverClass = "";
+                if (item.icon === "github") hoverClass = "hover:bg-black hover:text-white";
+                if (item.icon === "linkedin") hoverClass = "hover:bg-blue-600 hover:text-white";
+                if (item.icon === "mail") hoverClass = "hover:bg-red-600 hover:text-white";
 
-              return (
-                <button
-                  key={index}
-                  onClick={() => handleFooterClick(item)}
-                  className={`flex flex-col md:flex-row items-center gap-2 text-white border-2 border-transparent transition-all duration-200 px-4 py-2 rounded-lg ${hoverBorderClass}`}
-                  aria-label={item.label}
-                >
-                  {getIcon(item.icon, "w-8 h-8 md:w-10 md:h-10")}
-                  <span className="text-sm font-medium">{item.label}</span>
-                </button>
-              );
-            })}
+                return (
+                  <Mag>
+                  <button
+                    key={index}
+                    onClick={() => handleFooterClick(item)}
+                    className={`flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full  text-black transition-all duration-200 ${hoverClass}`}
+                    aria-label={item.label}
+                  >
+                    {getIcon(item.icon, "w-8 h-8 md:w-10 md:h-10")}
+                  </button>
+                  </Mag>
+                );
+              })}
+            </div>
           </div>
         </footer>
       </div>
@@ -162,6 +166,7 @@ const EmailSection = () => {
             if (item.icon === "mail") hoverClass = "hover:bg-red-600 hover:text-white";
 
             return (
+              <Mag>
               <button
                 key={index}
                 onClick={() => handleFooterClick(item)}
@@ -170,6 +175,7 @@ const EmailSection = () => {
               >
                 {getIcon(item.icon, "w-8 h-8 md:w-10 md:h-10")}
               </button>
+              </Mag>
             );
           })}
         </div>
