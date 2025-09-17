@@ -38,21 +38,21 @@ export default function Page() {
         <Header />
 
         {/* Home Section */}
-        <section id="home" className="snap-start items-center justify-center" style={{ gap: '-2.5rem' }}>
-          <h1 className="name text-[5vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
-              bg-clip-text text-transparent flex items-center justify-center z-10">
-            Jenas Anton
-          </h1>
-          <div className="type"></div>
-          <ZoomParallax
-            imageSrc="/computer.png"
-            imageAlt="computer"
-            maxScale={6.5}
-            originX={0.45}
-            originY={0.3}
-          />
-        </section>
-
+       <section id = "home">
+        <div>
+        <h1  className="name"> Jenas Anton Vimal </h1>
+        <div className="type">
+        </div>
+      
+      <ZoomParallax 
+        imageSrc="/computer.png"
+        imageAlt="computer"
+        maxScale={7.5}
+        originX={0.45}
+        originY={0.3}
+      />
+      </div>
+      </section>
         {/* Horizontal Scroll Section */}
         <HorizontalScroll />
 
