@@ -33,7 +33,7 @@
               transition={{ duration: 0.2, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.75 }}
             >
-              <div className="text-center mt-20 mb-20 justify-start">
+              <div className="text-center mt-10 mb-20 justify-start">
                 <h1 className="text-[8vh] position-top justify-start font-bold bg-clip-text text-black mb-4">
                   My Projects
                 </h1>

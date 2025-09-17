@@ -28,7 +28,7 @@ const Skills = () => {
       viewport={{ once: false, amount: 0.75 }}
     >
       {/* Heading Section */}
-      <div className="text-center mt-20">
+      <div className="text-center mt-10">
         <h1 className="text-[8vh] font-bold bg-clip-text text-black mb-4">
           My Skills
         </h1>
