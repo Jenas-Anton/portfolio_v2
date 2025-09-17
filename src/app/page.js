@@ -41,13 +41,13 @@ export default function Page() {
         <section id="home" className="snap-start">
           <div>
             <h1 className="name text-[5vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
-                 bg-clip-text text-transparent items-center justify-center mt-10 mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+                 bg-clip-text text-transparent items-center justify-center mt-[5vh] mb-[3vh] sm:mb-[4vh] md:mb-[5vh] lg:mb-[6vh]">
               Jenas Anton
             </h1>
-            <div className="type mb-6 sm:mb-8 md:mb-10"></div>
+            <div className="type mb-[2vh] sm:mb-[3vh] md:mb-[4vh]"></div>
             
             {/* Added container with proper spacing */}
-            <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20">
+            <div className="mt-[3vh] sm:mt-[4vh] md:mt-[5vh] lg:mt-[6vh]">
               <ZoomParallax
                 imageSrc="/computer.png"
                 imageAlt="computer"

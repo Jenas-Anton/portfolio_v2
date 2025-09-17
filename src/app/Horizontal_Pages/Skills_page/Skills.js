@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import BallCanvas from "./Canvas/Ball";
 import { SkillData } from "../../data";
@@ -45,7 +44,7 @@ const Skills = () => {
         className="
           flex flex-wrap justify-center items-center 
           gap-4 sm:gap-6 md:gap-10 mt-6 w-full px-4
-          max-h-[60vh] overflow-y-auto pb-20
+          max-h-[70vh] overflow-y-auto pb-20
         "
       >
         {SkillData.map((skillData) => (
