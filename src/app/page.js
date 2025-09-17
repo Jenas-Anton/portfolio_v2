@@ -38,21 +38,28 @@ export default function Page() {
         <Header />
 
         {/* Home Section */}
-       <section id = "home">
-        <div>
-        <h1  className="name"> Jenas Anton Vimal </h1>
-        <div className="type">
-        </div>
-      
+       <section id="home">
+  <div className="gap-10">
+    <h1 className="name z-10">Jenas Anton Vimal</h1>
+
+    {/* Spacer div */}
+    <div className="my-10" /> {/* You can adjust the height using margin or padding */}
+
+    <div className="type h-5rem">
+    </div>
+
+    <div>
       <ZoomParallax 
         imageSrc="/computer.png"
         imageAlt="computer"
         maxScale={7.5}
         originX={0.45}
-        originY={0.3}
+        inY={0.3}
       />
-      </div>
-      </section>
+    </div>
+  </div>
+</section>
+
         {/* Horizontal Scroll Section */}
         <HorizontalScroll />
 
