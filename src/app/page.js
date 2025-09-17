@@ -41,24 +41,28 @@ export default function Page() {
         <section id="home" className="snap-start">
           <div>
             <h1 className="name text-[5vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
-                 bg-clip-text text-transparent  items-center justify-center mt-10 mb-5 z-10">
+                 bg-clip-text text-transparent items-center justify-center mt-10 mb-8 sm:mb-12 md:mb-16 lg:mb-20">
               Jenas Anton
             </h1>
-            <div className="type"></div>
-            <ZoomParallax
-              imageSrc="/computer.png"
-              imageAlt="computer"
-              maxScale={6.5}
-              originX={0.45}
-              originY={0.3}
-            />
+            <div className="type mb-6 sm:mb-8 md:mb-10"></div>
+            
+            {/* Added container with proper spacing */}
+            <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20">
+              <ZoomParallax
+                imageSrc="/computer.png"
+                imageAlt="computer"
+                maxScale={6.5}
+                originX={0.45}
+                originY={0.3}
+              />
+            </div>
           </div>
         </section>
 
         {/* Horizontal Scroll Section */}
         <HorizontalScroll />
 
-        <section id="contact" >
+        <section id="contact">
           <EmailSection/>
         </section>
       </div>
