@@ -38,31 +38,25 @@ export default function Page() {
         <Header />
 
         {/* Home Section */}
-        <section id="home" className="flex-col snap-start">
-          <div>
-            <h1 className="name text-[5vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
-                 bg-clip-text text-transparent items-center justify-center mt-[5vh] mb-[3vh] sm:mb-[4vh] md:mb-[5vh] lg:mb-[6vh]">
-              Jenas Anton
-            </h1>
-            <div className="type mb-[2vh] sm:mb-[3vh] md:mb-[4vh]"></div>
-            
-            {/* Added container with proper spacing */}
-            <div className="mt-[3vh] sm:mt-[4vh] md:mt-[5vh] lg:mt-[6vh]">
-              <ZoomParallax
-                imageSrc="/computer.png"
-                imageAlt="computer"
-                maxScale={6.5}
-                originX={0.45}
-                originY={0.3}
-              />
-            </div>
-          </div>
+        <section id="home" className="snap-start flex flex-col items-center justify-center" style={{ gap: '-2.5rem' }}>
+          <h1 className="name text-[5vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
+              bg-clip-text text-transparent flex items-center justify-center z-10">
+            Jenas Anton
+          </h1>
+          <div className="type"></div>
+          <ZoomParallax
+            imageSrc="/computer.png"
+            imageAlt="computer"
+            maxScale={6.5}
+            originX={0.45}
+            originY={0.3}
+          />
         </section>
 
         {/* Horizontal Scroll Section */}
         <HorizontalScroll />
 
-        <section id="contact">
+        <section id="contact" >
           <EmailSection/>
         </section>
       </div>
