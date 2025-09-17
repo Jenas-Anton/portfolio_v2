@@ -152,7 +152,6 @@ const EmailSection = () => {
             <div className="flex justify-center items-center gap-12">
 
                 {FooterData.map((item, index) => (
-                <Mag>
                 <button
                     key={index}
                     onClick={() => handleFooterClick(item)}
@@ -161,7 +160,6 @@ const EmailSection = () => {
                 >
                     {getIcon(item.icon)} 
                 </button>
-                </Mag>
                 ))}
             </div>
             </div>
