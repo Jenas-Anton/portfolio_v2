@@ -27,9 +27,6 @@ export default function Menu() {
           onMouseLeave={() => setSelectedIndicator(pathname)}
           className={styles.nav}
         >
-          <div className={styles.header}>
-            <p>Navigation</p>
-          </div>
           {BtnList.map((data, index) => (
             <NavLink
               key={data.label}

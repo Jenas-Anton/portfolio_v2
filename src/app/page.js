@@ -58,7 +58,7 @@ export default function Page() {
         {/* Horizontal Scroll Section */}
         <HorizontalScroll />
 
-        <section >
+        <section id="contact" >
           <EmailSection/>
         </section>
       </div>
