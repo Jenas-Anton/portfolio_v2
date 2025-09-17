@@ -22,7 +22,7 @@ export default function Page() {
         setIsLoading(false);
         document.body.style.cursor = "auto";
         window.scrollTo(0, 0);
-      }, 3500);
+      }, 2400);
     })();
   }, []);
 
