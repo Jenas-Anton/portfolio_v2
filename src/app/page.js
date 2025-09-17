@@ -45,7 +45,7 @@ export default function Page() {
 
             {/* Spacer div */}
 
-            <div class="-my-22" /> 
+            <div class="-my-10" /> 
 
             <div>
               <ZoomParallax 
