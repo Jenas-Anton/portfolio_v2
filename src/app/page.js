@@ -38,14 +38,13 @@ export default function Page() {
         <Header />
 
         {/* Home Section */}
-        <section id="home" className="snap-start ">
+        <section id="home" className="snap-start">
           <div>
-              <h1
-                className="name text-[10vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
-                          bg-clip-text text-transparent items-center justify-center z-10 mt-10 mb-10"
-              >
-                Jenas Anton
-              </h1>
+            <h1 className="name text-[5vw] font-extrabold w-full bg-gradient-to-t from-gray-500 to-white 
+                 bg-clip-text text-transparent  items-center justify-center mt-10 mb-5 z-10">
+              Jenas Anton
+            </h1>
+            <div className="type"></div>
             <ZoomParallax
               imageSrc="/computer.png"
               imageAlt="computer"
