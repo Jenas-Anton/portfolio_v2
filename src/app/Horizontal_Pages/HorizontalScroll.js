@@ -15,6 +15,10 @@
     return (
       <div ref={containerRef} className="relative bg-[#FCFCFC] h-screen overflow-hidden">
         <div className="flex">
+
+          {/* <section id="education" className="panel">
+            <EducationTimeline />
+          </section> */}
           {/* Panel 1 */}
           <section id = "skills" className="panel ">
             <Skills />
@@ -24,7 +28,7 @@
           <section id = "projects" className="panel  text-black">
             <motion.div
               className="w-screen h-screen  flex flex-col items-center gap-10 p-6 "
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0.5 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.75 }}

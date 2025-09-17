@@ -29,7 +29,7 @@ body {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 0; /* No bottom margin */
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(8rem, 6vw, 6rem);
   font-weight: 900;
   position: relative;
   z-index: -20;

@@ -35,9 +35,6 @@ const Skills = () => {
         <h1 className="text-[8vh] font-bold bg-clip-text text-black mb-4">
           My Skills
         </h1>
-        <p className="text-black text-base sm:text-lg md:text-xl max-w-md mx-auto mb-4">
-          Explore the technologies and tools I work with to bring ideas to life
-        </p>
         <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
       </div>
 
@@ -56,7 +53,6 @@ const Skills = () => {
         {SkillData.map((skillData) => (
           <motion.div
             key={skillData.name}
-            variants={fadeInUp}
             className="
               w-20 h-24 
               sm:w-24 sm:h-28 

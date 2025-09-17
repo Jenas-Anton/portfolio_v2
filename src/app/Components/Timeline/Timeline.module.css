@@ -1,0 +1,102 @@
+.cd-horizontal-timeline {
+  opacity: 1;
+  margin: 2em auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.timeline {
+  position: relative;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.events-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+}
+
+.events {
+  position: absolute;
+  top: 49px;
+  left: 0;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  background: #000; /* black line */
+}
+
+.events a {
+  position: relative;
+  margin: 0 30px;
+  font-size: 1.3rem;
+  color: #000; /* black text */
+  text-align: center;
+}
+
+.events a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 2px solid #000; /* black border */
+  background-color: #000; /* black dot */
+  transform: translateX(-50%);
+}
+
+.events a.selected::after {
+  background-color: #000; /* black dot when active */
+  border-color: #000;
+}
+
+.filling-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: #000; /* black progress */
+  transform-origin: left center;
+  transition: transform 0.3s;
+}
+
+.cd-timeline-navigation a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid #000; 
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff; 
+  color: #000; 
+}
+
+.cd-timeline-navigation a.prev {
+  left: 0;
+}
+
+.cd-timeline-navigation a.next {
+  right: 0;
+}
+
+.events-content {
+  margin: 2em 0;
+  position: relative;
+  color: #000; /* black text for content */
+}
+
+.events-content li {
+  display: none;
+}
+
+.events-content li.selected {
+  display: block;
+}

@@ -1,4 +1,5 @@
-
+import { GraduationCap, Award, BookOpen } from "lucide-react";
+import { GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon } from "lucide-react";
 export const SkillData = [
   // 🔹 Programming Languages
   { 
@@ -132,3 +133,50 @@ export const BtnList = [
   },
 ];
 
+export const educationData = [
+  {
+    year: "2020",
+    institution: "New Horizon Public School",
+    degree: "ICSE",
+    score: "96.2%",
+    icon: <BookOpen className="w-4 h-4" />,
+    status: "completed",
+  },
+  {
+    year: "2022",
+    institution: "CMR National PU College",
+    degree: "Stream : PCMC",
+    score: "98%",
+    icon: <Award className="w-4 h-4" />,
+    status: "completed",
+  },
+  {
+    year: "2026",
+    institution: "MSRIT",
+    degree: "BE in Artificial Intelligence & Data Science",
+    score: "9.45 CGPA",
+    icon: <GraduationCap className="w-4 h-4" />,
+    status: "ongoing",
+  },
+];
+
+export const FooterData =  [
+  {
+    label: "Github",
+    link: "https://github.com/Jenas-Anton",
+    icon: "github",
+    newTab: true,
+  },
+  {
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/jenas-anton/",
+    icon: "linkedin",
+    newTab: true,
+  },
+  {
+    label: "G-Mail",
+    link: "jenasav010@gmail.com",
+    icon: "mail",
+    newTab: true,
+  },
+];
