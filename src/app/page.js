@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
-import ZoomParallax from "./Components/ZoomParallax";
+import ZoomParallax from "./Components/Zoom/ZoomParallax";
 import HorizontalScroll from "./Horizontal_Pages/HorizontalScroll";
 import Header from "./Components/Navigation/Header";
 import Preloader from "./Components/Preloader";
