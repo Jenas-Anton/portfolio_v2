@@ -2,7 +2,7 @@
   import React, { useRef } from "react";
   import useHorizontalScroll from "./useHorizontalScroll";
   import Skills from "./Skills_page/Skills";
-  import Project from "./Project"; 
+  import Project from "./Project_Page/Project"; 
   import { projects } from "../data";
   import {motion} from "framer-motion";
 
