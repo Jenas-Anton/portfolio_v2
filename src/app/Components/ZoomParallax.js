@@ -19,7 +19,6 @@ export default function ZoomParallax({
     offset: ['start start', 'end end'],
   });
 
-  // Scale up fully in the scroll range
   const scale = useTransform(scrollYProgress, [0, 1], [1, maxScale]);
 
   return (

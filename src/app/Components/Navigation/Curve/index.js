@@ -14,7 +14,7 @@ export default function Curve() {
     setPaths({ initial: initialPath, target: targetPath });
   }, []);
 
-  if (!paths.initial) return null; // render nothing until window is ready
+  if (!paths.initial) return null; 
 
   const curve = {
     initial: { d: paths.initial },

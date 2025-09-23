@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
-import DecryptedText from '../Decrypt_Text/decrypt'; // <-- import your component
+import DecryptedText from '../Decrypt_Text/decrypt'; 
 
 const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"];
 

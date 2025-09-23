@@ -9,7 +9,6 @@
   export default function HorizontalScroll() {
     const containerRef = useRef(null);
 
-    // Apply horizontal scroll effect
     useHorizontalScroll(containerRef);
 
     return (
@@ -19,12 +18,14 @@
           {/* <section id="education" className="panel">
             <EducationTimeline />
           </section> */}
-          {/* Panel 1 */}
+          
+
+          {/* First Horizontal Section */}
           <section id = "skills" className="panel ">
             <Skills />
           </section>
 
-          {/* Panel 2 */}
+          {/* second Horizontal section */}
           <section id = "projects" className="panel  text-black">
             <motion.div
               className="w-screen h-screen  flex flex-col items-center gap-10 p-6 "
@@ -37,7 +38,6 @@
                 <h1 className="text-[8vh] position-top justify-start font-bold bg-clip-text text-black mb-4">
                   My Projects
                 </h1>
-                <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
               </div>
             <div className="gallery ">
               {projects.map((project, index) => (

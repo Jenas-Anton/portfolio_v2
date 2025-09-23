@@ -27,12 +27,11 @@ const Skills = () => {
       transition={{ duration: 0.1, ease: "easeInOut" }}
       viewport={{ once: false, amount: 0.75 }}
     >
-      {/* Heading Section */}
+      {/* I put my skills here Title */}
       <div className="text-center mt-10">
         <h1 className="text-[8vh] font-bold bg-clip-text text-black mb-4">
           My Skills
         </h1>
-        <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
       </div>
 
       {/* Skills Grid */}

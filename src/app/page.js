@@ -33,7 +33,7 @@ export default function Page() {
         {isLoading && <Preloader />}
       </AnimatePresence>
 
-      {/* Page Content */}
+      {/* Page Title */}
       <div className="snap-y snap-mandatory">
         <Header />
 
@@ -43,8 +43,7 @@ export default function Page() {
             <h1 className="name z-10 bg-gradient-to-t from-gray-500 to-white 
                         bg-clip-text text-transparent">Jenas Anton Vimal</h1>
 
-            {/* Spacer div */}
-
+            {/*-ve Spacer div */}
             <div class="-my-10" /> 
 
             <div>
@@ -62,7 +61,7 @@ export default function Page() {
         {/* Horizontal Scroll Section */}
         <HorizontalScroll />
 
-        <section id="contact" >
+        <section id="contact" className="bg-[#FCFCFC]" >
           <EmailSection/>
         </section>
       </div>

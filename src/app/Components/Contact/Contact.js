@@ -28,7 +28,6 @@ const EmailSection = () => {
     }
   };
 
-  // Success state
   if (state.succeeded) {
     return (
       <div className="min-h-screen bg-[#FCFCFC] flex flex-col">
