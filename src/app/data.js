@@ -1,7 +1,7 @@
 import { GraduationCap, Award, BookOpen } from "lucide-react";
 import { GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon } from "lucide-react";
 export const SkillData = [
-  // 🔹 Programming Languages
+
   { 
     name: "C++", 
     src: "/skills-icons/c.svg", 
@@ -101,7 +101,7 @@ export const projects = [
   {
     title1: "Verdict",
     title2: "AI",
-    src: "/VerdictAI.png"   // ✅ remove "public/"
+    src: "/VerdictAI.png"   
   },
   {
     title1: "Medical",
