@@ -7,7 +7,6 @@ import Mag from "../Magnetic_Button/Magnetic";
 const EmailSection = () => {
   const [state, handleSubmit] = useForm("mgvadaka");
 
-  // Function to return icons
   const getIcon = (iconName, className = "w-8 h-8") => {
     if (iconName === "github") return <Github className={className} />;
     if (iconName === "linkedin") return <Linkedin className={className} />;
@@ -15,7 +14,6 @@ const EmailSection = () => {
     return null;
   };
 
-  // Handle footer icon clicks
   const handleFooterClick = (item) => {
     if (item.icon === "mail") {
       window.location.href = `mailto:${item.link}`;
@@ -68,7 +66,6 @@ const EmailSection = () => {
     );
   }
 
-  // Default state
   return (
     <div className="min-h-screen bg-[#FCFCFC] flex flex-col w-full">
       {/* Main Content */}
