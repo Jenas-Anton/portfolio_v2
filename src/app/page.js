@@ -7,9 +7,11 @@ import HorizontalScroll from "./Horizontal_Pages/HorizontalScroll";
 import Header from "./Components/Navigation/Header";
 import Preloader from "./Components/Preloader";
 import EmailSection from "./Components/Contact/Contact";
+import usePageSnap from "./hooks/usePageSnap";
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
+  usePageSnap();
 
   useEffect(() => {
     (async () => {
@@ -34,7 +36,7 @@ export default function Page() {
       </AnimatePresence>
 
       {/* Page Title */}
-      <div className="snap-y snap-mandatory">
+      <div>
         <Header />
 
         {/* Home Section */}

@@ -43,6 +43,9 @@ export default function ZoomParallax({
                 alt={imageAlt}
                 fill
                 priority
+                // Small pixel-art PNG: serve as-is (resizing only blurs it, and
+                // skips the WebP conversion that hangs in local dev)
+                unoptimized
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
               />
             </div>

@@ -25,14 +25,12 @@ export default function useHorizontalScroll(containerRef) {
         ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
+          id: "horizontal",
           pin: true,
           scrub: true,
           // Recompute distances after rotation / window resize (iPad split view, Mac window resize)
           invalidateOnRefresh: true,
-          snap: {
-            snapTo: 1 / (sections.length - 1),
-            duration: 0,
-          },
+          // Snapping is handled page-wide by usePageSnap
           end: () =>
             "+=" + containerRef.current.offsetWidth * (sections.length - 1),
         },
