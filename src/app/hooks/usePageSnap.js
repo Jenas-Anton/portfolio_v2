@@ -84,3 +84,32 @@ export default function usePageSnap() {
     };
   }, []);
 }
+
+// Scroll position (px) that shows a section. Slides inside the pinned
+// horizontal section (Education / Skills / Projects) don't sit at their DOM
+// position, so work them out from the horizontal ScrollTrigger instead.
+export function getSectionScrollY(id) {
+  const el = document.getElementById(id);
+  if (!el) return null;
+
+  const h = ScrollTrigger.getById("horizontal");
+  if (h && h.trigger.contains(el)) {
+    const panels = [...h.trigger.querySelectorAll(".panel")];
+    const index = panels.findIndex((p) => p === el || p.contains(el));
+    if (index >= 0) {
+      const step = panels.length > 1 ? (h.end - h.start) / (panels.length - 1) : 0;
+      return Math.round(h.start + step * index);
+    }
+  }
+
+  const max = ScrollTrigger.maxScroll(window);
+  return Math.min(Math.round(el.getBoundingClientRect().top + window.scrollY), max);
+}
+
+export function scrollToSection(id) {
+  const y = getSectionScrollY(id);
+  if (y === null) return false;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: y, behavior: reduced ? "auto" : "smooth" });
+  return true;
+}
