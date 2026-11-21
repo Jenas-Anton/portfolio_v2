@@ -5,12 +5,14 @@ export default function Mag({children}) {
     const magnetic = useRef(null);
 
     useEffect( () => {
-        const xTo = gsap.quickTo(magnetic.current, "x", {duration: 0.3, ease: "elastic.out(2.5, 0.1)"})
-        const yTo = gsap.quickTo(magnetic.current, "y", {duration: 0.3, ease: "elastic.out(2.5, 0.1)"})
+        const el = magnetic.current;
+        if (!el) return;
+        const xTo = gsap.quickTo(el, "x", {duration: 0.3, ease: "elastic.out(2.5, 0.1)"})
+        const yTo = gsap.quickTo(el, "y", {duration: 0.3, ease: "elastic.out(2.5, 0.1)"})
 
         const mouseMove = (e) => {
             const { clientX, clientY } = e;
-            const {height, width, left, top} = magnetic.current.getBoundingClientRect();
+            const {height, width, left, top} = el.getBoundingClientRect();
             const x = clientX - (left + width/2) 
             const y = clientY - (top + height/2) 
             xTo(x);
@@ -18,20 +20,18 @@ export default function Mag({children}) {
         }
 
         const mouseLeave = (e) => {
-            gsap.to(magnetic.current, {x: 0, duration: 0.2})
-            gsap.to(magnetic.current, {y: 0, duration: 0.2})
+            gsap.to(el, {x: 0, duration: 0.2})
+            gsap.to(el, {y: 0, duration: 0.2})
             xTo(0);
             yTo(0)
         }
 
-        magnetic.current.addEventListener("mousemove", mouseMove)
-        magnetic.current.addEventListener("mouseleave", mouseLeave)
+        el.addEventListener("mousemove", mouseMove)
+        el.addEventListener("mouseleave", mouseLeave)
 
         return () => {
-            if (magnetic.current) {
-                magnetic.current.removeEventListener("mousemove", mouseMove);
-                magnetic.current.removeEventListener("mouseleave", mouseLeave);
-            }
+            el.removeEventListener("mousemove", mouseMove);
+            el.removeEventListener("mouseleave", mouseLeave);
         }
     }, [])
 
