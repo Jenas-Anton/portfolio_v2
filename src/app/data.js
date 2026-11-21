@@ -118,6 +118,7 @@ export const projects = [
 
 export const BtnList = [
   { label: "Home", link: "#home" },
+  { label: "Education", link: "#education" },
   { label: "Skills", link: "#skills" },
   { label: "Projects", link: "#projects" },
   { label: "Contact" , link :"#contact"},
@@ -126,7 +127,9 @@ export const BtnList = [
 export const educationData = [
   {
     year: "2020",
+    period: "Passed out 2020",
     institution: "New Horizon Public School",
+    level: "Class X",
     degree: "ICSE",
     score: "96.2%",
     icon: <BookOpen className="w-4 h-4" />,
@@ -134,19 +137,23 @@ export const educationData = [
   },
   {
     year: "2022",
+    period: "Jun 2020 – May 2022",
     institution: "CMR National PU College",
-    degree: "Stream : PCMC",
+    level: "Class XII",
+    degree: "PCMC",
     score: "98%",
     icon: <Award className="w-4 h-4" />,
     status: "completed",
   },
   {
     year: "2026",
-    institution: "MSRIT",
-    degree: "BE in Artificial Intelligence & Data Science",
-    score: "9.45 CGPA",
+    period: "Nov 2023 – May 2026",
+    institution: "Ramaiah Institute of Technology",
+    level: "B.E.",
+    degree: "Artificial Intelligence & Data Science",
+    score: "9.5 CGPA",
     icon: <GraduationCap className="w-4 h-4" />,
-    status: "ongoing",
+    status: "completed",
   },
 ];
 

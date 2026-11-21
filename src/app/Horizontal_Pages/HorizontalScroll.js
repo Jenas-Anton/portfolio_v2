@@ -2,7 +2,8 @@
   import React, { useRef } from "react";
   import useHorizontalScroll from "./useHorizontalScroll";
   import Skills from "./Skills_page/Skills";
-  import Project from "./Project_Page/Project"; 
+  import Project from "./Project_Page/Project";
+  import Education from "./Education_Page/Education";
   import { projects } from "../data";
   import {motion} from "framer-motion";
 
@@ -15,9 +16,9 @@
       <div ref={containerRef} className="relative bg-[#FCFCFC] h-svh overflow-hidden">
         <div className="flex">
 
-          {/* <section id="education" className="panel">
-            <EducationTimeline />
-          </section> */}
+          <section id="education" className="panel">
+            <Education />
+          </section>
           
 
           {/* First Horizontal Section */}

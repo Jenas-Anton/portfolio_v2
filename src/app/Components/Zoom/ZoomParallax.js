@@ -20,6 +20,9 @@ export default function ZoomParallax({
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, maxScale]);
+  // Fade to the Skills background (#FCFCFC) at the end of the zoom so the
+  // off-white, pixelated screen edge doesn't show as a seam.
+  const washOpacity = useTransform(scrollYProgress, [0.75, 0.98], [0, 1]);
 
   return (
     <>
@@ -44,6 +47,7 @@ export default function ZoomParallax({
               />
             </div>
           </motion.div>
+          <motion.div className={styles.wash} style={{ opacity: washOpacity }} />
         </div>
       </div>
     </>

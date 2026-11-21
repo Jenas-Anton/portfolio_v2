@@ -18,6 +18,14 @@
   box-sizing: border-box;
 }
 
+.wash {
+  position: absolute;
+  inset: 0;
+  background: #fcfcfc;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .el {
   display: flex;
   align-items: center;
