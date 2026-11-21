@@ -37,7 +37,9 @@ const BallCanvas = ({ icon }) => {
   return (
     <Canvas
       frameloop="demand"
-      gl={{ preserveDrawingBuffer: true }}
+      // Cap pixel ratio: Retina/ProMotion screens would otherwise render 3x pixels per ball
+      dpr={[1, 1.5]}
+      gl={{ preserveDrawingBuffer: true, powerPreference: "low-power", antialias: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

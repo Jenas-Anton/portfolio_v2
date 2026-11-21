@@ -44,7 +44,7 @@ export default function Page() {
                         bg-clip-text text-transparent">Jenas Anton Vimal</h1>
 
             {/*-ve Spacer div */}
-            <div class="-my-10" /> 
+            <div className="-my-4 sm:-my-10" />
 
             <div>
               <ZoomParallax 

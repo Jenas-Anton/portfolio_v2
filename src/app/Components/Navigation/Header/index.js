@@ -10,16 +10,19 @@ export default function Header() {
 
   return (
     <>
-      <div
+      <button
+        type="button"
         onClick={() => setIsActive(!isActive)}
         className={styles.button}
+        aria-label={isActive ? "Close menu" : "Open menu"}
+        aria-expanded={isActive}
       >
         <div
           className={`${styles.burger} ${
             isActive ? styles.burgerActive : ""
           }`}
         ></div>
-      </div>
+      </button>
 
       <AnimatePresence mode="wait">
         {isActive && (

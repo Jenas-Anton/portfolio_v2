@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1328" height="896" viewBox="0 0 1328 896">
+  <rect width="1328" height="896" fill="#D9E4F2"/>
+  <rect x="214" y="134" width="900" height="628" rx="16" fill="#F5F8FC"/>
+
+  <g transform="translate(16 50)"><g stroke="#3D3A45" stroke-width="7" fill="none" stroke-linecap="round">
+    <!-- edges -->
+    <path d="M430 260 C 500 260, 500 200, 570 200"/>
+    <path d="M430 260 C 500 260, 500 330, 570 330"/>
+    <path d="M720 200 C 790 200, 790 265, 860 265"/>
+    <path d="M720 330 C 790 330, 790 265, 860 265"/>
+  </g>
+
+  <!-- input node: chat -->
+  <g stroke="#3D3A45" stroke-width="7">
+    <rect x="290" y="205" width="140" height="110" rx="18" fill="#A5C8A9"/>
+    <rect x="320" y="232" width="80" height="44" rx="10" fill="#fff"/>
+    <path d="M338 276 L332 296 L356 276 Z" fill="#fff" stroke-linejoin="round"/>
+  </g>
+  <g fill="#3D3A45"><circle cx="342" cy="254" r="6"/><circle cx="360" cy="254" r="6"/><circle cx="378" cy="254" r="6"/></g>
+
+  <!-- LLM node: brain/spark -->
+  <g stroke="#3D3A45" stroke-width="7">
+    <rect x="570" y="150" width="150" height="100" rx="18" fill="#B3874A"/>
+    <path d="M645 170 L655 192 L678 200 L655 208 L645 230 L635 208 L612 200 L635 192 Z" fill="#fff" stroke-linejoin="round"/>
+  </g>
+
+  <!-- tool node: wrench / code -->
+  <g stroke="#3D3A45" stroke-width="7">
+    <rect x="570" y="280" width="150" height="100" rx="18" fill="#9FB6DA"/>
+    <path d="M620 310 L600 330 L620 350 M670 310 L690 330 L670 350 M655 305 L635 355" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- output node: anvil (forge) -->
+  <g stroke="#3D3A45" stroke-width="7" stroke-linejoin="round">
+    <rect x="860" y="205" width="150" height="120" rx="18" fill="#F2C76E"/>
+    <path d="M885 245 H985 C985 262, 965 270, 952 272 V290 H968 V302 H902 V290 H918 V272 C905 268, 892 262, 885 245 Z" fill="#fff"/>
+  </g>
+
+  <!-- ports -->
+  <g fill="#fff" stroke="#3D3A45" stroke-width="6">
+    <circle cx="430" cy="260" r="10"/><circle cx="570" cy="200" r="10"/><circle cx="570" cy="330" r="10"/>
+    <circle cx="720" cy="200" r="10"/><circle cx="720" cy="330" r="10"/><circle cx="860" cy="265" r="10"/>
+  </g>
+
+  </g>
+  <text x="664" y="560" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="112" fill="#4A3420">AgentForge</text>
+  <text x="664" y="630" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="36" fill="#6B6470" letter-spacing="2">Visual AI Workflow Builder</text>
+</svg>

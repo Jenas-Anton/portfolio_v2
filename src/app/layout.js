@@ -15,6 +15,21 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Jenas Anton",
   description: "Portfolio about Jenas Anton",
+  appleWebApp: {
+    capable: true,
+    title: "Jenas Anton",
+    statusBarStyle: "black-translucent",
+  },
+  formatDetection: { telephone: false },
+};
+
+// Proper scaling on phones/tablets; `viewportFit: "cover"` lets the page use
+// the full screen on notched iPhones (padding comes from safe-area insets).
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#292929",
 };
 
 export default function RootLayout({ children }) {

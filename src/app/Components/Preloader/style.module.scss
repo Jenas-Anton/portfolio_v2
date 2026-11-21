@@ -1,5 +1,6 @@
 .introduction{
     height: 100vh;
+    height: 100lvh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -27,7 +28,10 @@
   gap: 10px;          
 
   color: white;
-  font-size: 70px;
+  font-size: clamp(28px, 7vw, 70px);
+  text-align: center;
+  padding-inline: 1rem;
+  white-space: pre-line;
   position: absolute;
   z-index: 1;
 

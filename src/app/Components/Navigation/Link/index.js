@@ -4,7 +4,7 @@ import NextLink from "next/link";
 import { motion } from "framer-motion";
 import { slide, scale } from "../Header/anime";
 
-export default function NavLink({ data, isActive, setSelectedIndicator }) {
+export default function NavLink({ data, isActive, setSelectedIndicator, onNavigate }) {
   const { label, link, index } = data;
 
   const handleClick = (e) => {
@@ -16,6 +16,8 @@ export default function NavLink({ data, isActive, setSelectedIndicator }) {
         section.scrollIntoView({ behavior: "smooth" });
         setSelectedIndicator(link);
       }
+      // The menu covers the whole screen on phones, so close it after navigating
+      onNavigate?.();
     } else {
       setSelectedIndicator(link);
     }

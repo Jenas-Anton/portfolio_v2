@@ -109,9 +109,10 @@ export const projects = [
     src: "/MedicalChatbot.png"
   },
   {
-    title1: "Image",
-    title2: "Generator",
-    src: "/Stable Diffusion.png"
+    title1: "Agent",
+    title2: "Forge",
+    src: "/AgentForge.svg",
+    link: "https://github.com/ramnath7shenoy/AgentForge",
   },
 ];
 

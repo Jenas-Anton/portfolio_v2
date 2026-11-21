@@ -7,7 +7,7 @@ import { menuSlide } from '../Header/anime';
 import NavLink from '../Link';
 import { BtnList } from '@/app/data';
 import Curve from '../Curve';
-export default function Menu() {
+export default function Menu({ onClose }) {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
@@ -33,6 +33,7 @@ export default function Menu() {
               data={{ ...data, index }}
               isActive={selectedIndicator === data.link}
               setSelectedIndicator={setSelectedIndicator}
+              onNavigate={onClose}
             />
           ))}
         </div>

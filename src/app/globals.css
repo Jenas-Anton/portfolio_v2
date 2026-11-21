@@ -19,17 +19,34 @@
   }
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  /* Never allow sideways scrolling on phones */
+  overflow-x: clip;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+video,
+canvas {
+  max-width: 100%;
 }
 
 .name {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: max(2rem, env(safe-area-inset-top));
   margin-bottom: 0; /* No bottom margin */
-  font-size: clamp(8rem, 6vw, 6rem);
+  padding-inline: 1rem;
+  /* Scales from phones (~3rem) up to large desktops (8rem) */
+  font-size: clamp(2.75rem, 11vw, 8rem);
+  overflow-wrap: anywhere;
   font-weight: 900;
   position: relative;
   z-index: -20;
@@ -58,6 +75,7 @@ body {
 .gallery-panel {
   width: 100vw;
   height: 100vh;
+  height: 100svh;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -108,6 +126,17 @@ body {
   }
   50% {
     transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+/* Respect users who turn off animations (iOS/macOS "Reduce Motion") */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
 

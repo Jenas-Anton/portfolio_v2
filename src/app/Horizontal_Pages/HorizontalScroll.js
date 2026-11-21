@@ -12,7 +12,7 @@
     useHorizontalScroll(containerRef);
 
     return (
-      <div ref={containerRef} className="relative bg-[#FCFCFC] h-screen overflow-hidden">
+      <div ref={containerRef} className="relative bg-[#FCFCFC] h-svh overflow-hidden">
         <div className="flex">
 
           {/* <section id="education" className="panel">
@@ -28,14 +28,14 @@
           {/* second Horizontal section */}
           <section id = "projects" className="panel  text-black">
             <motion.div
-              className="w-screen h-screen  flex flex-col items-center gap-10 p-6 "
+              className="w-screen h-svh flex flex-col items-center gap-6 sm:gap-10 px-4 py-6 sm:p-6"
               initial={{ opacity: 0.5 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.75 }}
             >
-              <div className="text-center mt-10 mb-20 justify-start">
-                <h1 className="text-[8vh] position-top justify-start font-bold bg-clip-text text-black mb-4">
+              <div className="text-center mt-10 mb-8 sm:mb-20">
+                <h1 className="text-[clamp(2.25rem,8vh,5rem)] font-bold bg-clip-text text-black mb-4">
                   My Projects
                 </h1>
               </div>

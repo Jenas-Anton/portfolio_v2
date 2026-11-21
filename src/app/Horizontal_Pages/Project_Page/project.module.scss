@@ -1,17 +1,20 @@
 .project{
     border-top: 2px solid black;
-    padding-top: 0.8vw;
-    padding-bottom: 0.8vw;
+    padding-block: clamp(0.75rem, 0.8vw, 1.25rem);
     cursor: pointer;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    touch-action: manipulation;
+    user-select: none;
 }
-  
+
 .project p{
-    font-size: 4vw;
+    /* 4vw is ~15px on a phone; keep a readable floor and a sensible cap on big screens */
+    font-size: clamp(1.75rem, 4vw, 4.5rem);
     margin: 0px;
+    white-space: nowrap;
 }
 .project p:nth-of-type(1){
     margin-right: 0.75vw;
@@ -22,6 +25,13 @@
 .project:last-of-type{
     border-bottom: 2px solid black;
 }
+.imgContainer{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
 .project img{
-    width: 10vw;
+    width: clamp(4.5rem, 10vw, 12rem);
+    max-width: none;
+    height: auto;
 }
