@@ -112,7 +112,7 @@ export const projects = [
     title1: "Agent",
     title2: "Forge",
     src: "/AgentForge.svg",
-    link: "https://github.com/ramnath7shenoy/AgentForge",
+    link: "https://github.com/Jenas-Anton/AgentForge",
   },
 ];
 
