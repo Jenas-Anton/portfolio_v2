@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import BallCanvas from "./Canvas/Ball";
 import { SkillData } from "../../data";
 import { motion } from "framer-motion";
@@ -23,7 +23,56 @@ const fadeInUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0, ease: "easeOut" } },
 };
 
+// When the skills grid can't scroll any further in the direction the user is
+// scrolling, hand the scroll to the page so the horizontal section keeps moving
+// instead of getting stuck on the grid.
+function useScrollHandoff(ref) {
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const atEnd = (dy) =>
+      dy > 0
+        ? el.scrollTop + el.clientHeight >= el.scrollHeight - 1
+        : el.scrollTop <= 0;
+
+    const onWheel = (e) => {
+      // Normalise line/page deltas (Firefox) to pixels
+      const dy = e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? window.innerHeight : 1);
+      if (!dy || !atEnd(dy)) return;
+      e.preventDefault();
+      window.scrollBy(0, dy);
+    };
+
+    let lastY = null;
+    const onTouchStart = (e) => { lastY = e.touches[0].clientY; };
+    const onTouchMove = (e) => {
+      if (lastY === null) return;
+      const y = e.touches[0].clientY;
+      const dy = lastY - y;
+      lastY = y;
+      if (!dy || !atEnd(dy)) return;
+      e.preventDefault();
+      window.scrollBy(0, dy);
+    };
+    const onTouchEnd = () => { lastY = null; };
+
+    el.addEventListener("wheel", onWheel, { passive: false });
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchmove", onTouchMove, { passive: false });
+    el.addEventListener("touchend", onTouchEnd);
+    return () => {
+      el.removeEventListener("wheel", onWheel);
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchmove", onTouchMove);
+      el.removeEventListener("touchend", onTouchEnd);
+    };
+  }, [ref]);
+}
+
 const Skills = () => {
+  const gridRef = useRef(null);
+  useScrollHandoff(gridRef);
   // Phones/tablets get flat icons instead of 15 WebGL canvases: iOS Safari
   // limits live WebGL contexts, and the 3D balls capture touch so the page
   // can't be scrolled over them.
@@ -48,6 +97,7 @@ const Skills = () => {
 
       {/* Skills Grid */}
       <motion.div
+        ref={gridRef}
         variants={staggerContainer(0.2, 0.1)}
         initial="hidden"
         whileInView="show"
@@ -55,7 +105,7 @@ const Skills = () => {
         className="
           flex flex-wrap justify-center items-center 
           gap-4 sm:gap-6 md:gap-10 mt-6 w-full px-4
-          max-h-[70svh] overflow-y-auto overscroll-contain pb-20
+          max-h-[70svh] overflow-y-auto pb-20
         "
       >
         {SkillData.map((skillData) => (
